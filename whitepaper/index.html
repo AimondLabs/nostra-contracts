@@ -3312,6 +3312,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <th>Network</th>
                             <th>Gas Fee</th>
                             <th>Avg. Block Time</th>
+                            <th>Finality</th>
                             <th>Pros</th>
                             <th>Cons</th>
                             <th>Verdict</th>
@@ -3320,44 +3321,54 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                     <tbody>
                         <!-- L1 / Sidechains -->
                         <tr>
-                            <td rowspan="6" style="background: rgba(var(--accent-rgb), 0.05);"><strong>L1 /
+                            <td rowspan="7" style="background: rgba(var(--accent-rgb), 0.05);"><strong>L1 /
                                     Sidechain</strong></td>
-                            <td><strong>Polygon PoS</strong></td>
-                            <td><span style="color: var(--success); font-weight: 600;">~ $0.001</span></td>
-                            <td>~ 2.1s</td>
-                            <td>
-                                <ul>
-                                    <li>Extremely low fees</li>
-                                    <li>Mature ecosystem</li>
-                                    <li><strong>Used by Polymarket (Proven)</strong></li>
-                                </ul>
-                            </td>
-                            <td>Reorg risks (rare now)</td>
-                            <td><span class="label label-success">Top Choice</span></td>
-                        </tr>
-                        <tr>
                             <td><strong>BNB Smart Chain (BSC)</strong></td>
-                            <td><span style="color: var(--success); font-weight: 600;">~ $0.03</span></td>
-                            <td>~ 3.0s</td>
+                            <td><span style="color: var(--success); font-weight: 600;">0.05 Gwei (~$0.01)</span></td>
+                            <td>450ms (0.45s)</td>
+                            <td>Probabilistic<br><span style="font-size: 0.9em; color: gray;">(15 block × 0.45s ≈
+                                    7s)</span>
+                            </td>
                             <td>
                                 <ul>
                                     <li>Huge global user base</li>
                                     <li>Low fees</li>
                                     <li>High liquidity</li>
+                                    <li><strong>Used by Opinion Labs (Mainnet)</strong></li>
                                 </ul>
                             </td>
                             <td>More centralized validator set</td>
                             <td><span class="label label-success">Top Choice</span></td>
                         </tr>
                         <tr>
+                            <td><strong>Polygon PoS</strong></td>
+                            <td><span style="color: var(--success); font-weight: 600;">~ $0.001</span></td>
+                            <td>~ 2.1s</td>
+                            <td>Probabilistic<br><span style="font-size: 0.9em; color: gray;">(~128 block × 2.1s ≈
+                                    5m)</span></td>
+                            <td>
+                                <ul>
+                                    <li>Extremely low fees</li>
+                                    <li>Mature ecosystem</li>
+                                    <li>Excellent EVM compatibility</li>
+                                </ul>
+                            </td>
+                            <td>Reorg risks (rare now)</td>
+                            <td><span class="label label-primary">Strong Alternative</span></td>
+                        </tr>
+
+                        <tr>
                             <td><strong>Monad</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">&lt; $0.001</span></td>
                             <td>1.0s</td>
+                            <td><strong>Instant</strong><br><span style="font-size: 0.9em; color: gray;">(1 block × 1s =
+                                    1s)</span></td>
                             <td>
                                 <ul>
                                     <li>10,000 TPS (Parallel EVM)</li>
                                     <li>1s Block Time (Instant)</li>
                                     <li>Fully EVM Compatible</li>
+                                    <li><strong>Supported by Opinion Labs</strong></li>
                                 </ul>
                             </td>
                             <td>
@@ -3373,6 +3384,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><strong>Monero (XMR)</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">Low</span></td>
                             <td>~ 2 mins</td>
+                            <td>Slow<br><span style="font-size: 0.9em; color: gray;">(10 block × 2m ≈ 20m)</span></td>
                             <td>
                                 <ul>
                                     <li><strong>Total Privacy</strong> (Ring Signatures)</li>
@@ -3391,6 +3403,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><strong>Zcash (ZEC)</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">Low</span></td>
                             <td>~ 75s</td>
+                            <td>Slow<br><span style="font-size: 0.9em; color: gray;">(24 block × 75s ≈ 30m)</span></td>
                             <td>
                                 <ul>
                                     <li>Optional Privacy (zk-SNARKs)</li>
@@ -3405,24 +3418,44 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><span class="label label-danger">Incompatible</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Hyperliquid</strong></td>
-                            <td><span style="color: var(--success); font-weight: 600;">~ $0.00</span></td>
-                            <td>&lt; 1s</td>
+                            <td><strong>Ethereum (L1)</strong></td>
+                            <td><span style="color: var(--danger); font-weight: 600;">$2.00 - $50.00+</span></td>
+                            <td>~ 12s</td>
+                            <td>Safe: ~12m<br><span style="font-size: 0.9em; color: gray;">(2 Epochs)</span></td>
                             <td>
                                 <ul>
-                                    <li><strong>Unmatched Speed</strong> (200k TPS)</li>
-                                    <li>HyperEVM (Custom Contracts)</li>
-                                    <li>Native Perps Liquidity</li>
+                                    <li>Maximum Security</li>
+                                    <li>Highest Liquidity</li>
                                 </ul>
                             </td>
                             <td>
                                 <ul>
-                                    <li>Separate L1 (Bridging needed)</li>
-                                    <li>Newer Ecosystem</li>
+                                    <li><strong>Prohibitive Costs</strong></li>
+                                    <li>Slow for high-freq trading</li>
                                 </ul>
                             </td>
-                            <td><span class="label label-success">Strong Contender</span></td>
+                            <td><span class="label label-warning">Settlement Only</span></td>
                         </tr>
+                        <tr>
+                            <td><strong>Solana</strong></td>
+                            <td><span style="color: var(--success); font-weight: 600;">~ $0.00025</span></td>
+                            <td>~ 400ms</td>
+                            <td>Fast<br><span style="font-size: 0.9em; color: gray;">(~12s finalized)</span></td>
+                            <td>
+                                <ul>
+                                    <li>High Throughput</li>
+                                    <li>Low Latency</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><strong>Requires Rust rewrite</strong></li>
+                                    <li>History of outages</li>
+                                </ul>
+                            </td>
+                            <td><span class="label label-danger">Incompatible</span></td>
+                        </tr>
+
 
                         <!-- L2s -->
                         <tr>
@@ -3431,11 +3464,14 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><strong>Base</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">&lt; $0.01</span></td>
                             <td>Instant (~2s)</td>
+                            <td>Instant (Soft)<br><span style="font-size: 0.9em; color: gray;">Hard: ~12m (Eth
+                                    L1)</span></td>
                             <td>
                                 <ul>
                                     <li>Coinbase integration (easy onboarding)</li>
                                     <li>Rapidly growing</li>
                                     <li>EVM equivalent</li>
+                                    <li><strong>Used by Limitless Exchange</strong></li>
                                 </ul>
                             </td>
                             <td>Newer ecosystem</td>
@@ -3445,10 +3481,13 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><strong>Arbitrum One</strong></td>
                             <td><span style="color: var(--warning); font-weight: 600;">~ $0.10</span></td>
                             <td>Instant (~0.25s)</td>
+                            <td>Instant (Soft)<br><span style="font-size: 0.9em; color: gray;">Hard: ~12m (Eth
+                                    L1)</span></td>
                             <td>
                                 <ul>
                                     <li>Highest L2 TVL</li>
                                     <li>Deep USDC liquidity</li>
+                                    <li><strong>Used by PrismX / Rain</strong></li>
                                 </ul>
                             </td>
                             <td>Fees slightly higher than Polygon/BSC</td>
@@ -3458,6 +3497,8 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><strong>zkSync Era</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">~ $0.05</span></td>
                             <td>Instant (~1s)</td>
+                            <td>Instant (Soft)<br><span style="font-size: 0.9em; color: gray;">Hard: ~20m (Eth
+                                    L1)</span></td>
                             <td>
                                 <ul>
                                     <li>Native Account Abstraction</li>
@@ -3471,6 +3512,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                         <tr>
                             <td><strong>Lighter</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">Low</span></td>
+                            <td>Instant</td>
                             <td>Instant</td>
                             <td>
                                 <ul>
@@ -3490,10 +3532,28 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                 </table>
             </div>
 
-            <h4>Primary Recommendation: Polygon or BSC</h4>
-            <p><strong>Polygon PoS</strong> and <strong>BSC</strong> are currently the top candidates for deployment.
-                Their combination of extremely low transaction fees, mature ecosystems, and massive global user bases
-                makes them ideal for a high-frequency prediction market platform where gas costs must be negligible.</p>
+            <h4>Primary Recommendation: BNB Smart Chain (BSC)</h4>
+            <div class="box box-success" style="margin-bottom: 1.5rem;">
+                <span class="box-title">Why BSC Wins</span>
+                <ul>
+                    <li><strong>Superior Speed:</strong> With the recent upgrade to <strong>450ms block times</strong>,
+                        BSC offers <strong>~7s finality</strong>. This is significantly faster than Polygon PoS (~2-5
+                        minutes), creating a much snappier trading experience closer to centralized exchanges.</li>
+                    <li><strong>Binance Exchange Alignment:</strong> Building natively on BSC provides a significant
+                        <strong>strategic advantage for potential listing on Binance</strong>. Projects that drive
+                        volume and utility to the BNB ecosystem are often prioritized for support and listing
+                        opportunities.
+                    </li>
+                    <li><strong>Proven Liquidity:</strong> BSC consistently maintains high liquidity and active user
+                        counts, crucial for bootstrapping a prediction market.</li>
+                    <li><strong>Growing & Competitive:</strong> BNB Chain is proactively evolving, <a
+                            href="https://x.com/BNBCHAIN/status/1970504591117897786" target="_blank">recently
+                            announcing</a> fee reductions and speed upgrades to directly compete with Base and Solana,
+                        ensuring it remains an optimal environment for high-frequency trading.</li>
+                </ul>
+            </div>
+            <p>While Polygon remains a viable backup due to its low fees, BSC's combination of raw performance and
+                strategic ecosystem alignment makes it the optimal launchpad for <strong>Nostra</strong>.</p>
 
             <div class="box box-success">
                 <span class="box-title">Technical Note: Zero Code Change (EVM Portability)</span>
@@ -3718,7 +3778,8 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
             <ul>
                 <li><strong>Protocol Separation:</strong> The `redeemPositions` function belongs to the standard
                     <strong>Gnosis CTF Core</strong> contract. This is a neutral, immutable primitive that knows nothing
-                    about our specific Exchange contract.</li>
+                    about our specific Exchange contract.
+                </li>
                 <li><strong>Security & Control:</strong> The CTF contract is designed to return collateral <strong>only
                         to the token holder</strong>. It cannot be forced to trigger a subsequent deposit into another
                     contract arbitrarily.</li>
