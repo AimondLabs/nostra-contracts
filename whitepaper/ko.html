@@ -2540,45 +2540,91 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                     <tbody>
                         <!-- L1 / Sidechains -->
                         <tr>
-                            <td rowspan="6" style="background: rgba(var(--accent-rgb), 0.05);"><strong>L1 /
+                            <td rowspan="7" style="background: rgba(var(--accent-rgb), 0.05);"><strong>L1 /
                                     사이드체인</strong></td>
-                            <td><strong>Polygon PoS</strong></td>
-                            <td><span style="color: var(--success); font-weight: 600;">~ $0.001 (약 1.5원)</span></td>
-                            <td>~ 2.1초</td>
-                            <td>
-                                <ul>
-                                    <li>극도로 낮은 수수료</li>
-                                    <li>성숙한 생태계</li>
-                                    <li><strong>Polymarket이 사용 (검증됨)</strong></li>
-                                </ul>
-                            </td>
-                            <td>재구성(Reorg) 위험 (현재는 드묾)</td>
-                            <td><span class="label label-success">최고의 선택</span></td>
-                        </tr>
-                        <tr>
                             <td><strong>BNB Smart Chain (BSC)</strong></td>
-                            <td><span style="color: var(--success); font-weight: 600;">~ $0.03 (약 45원)</span></td>
-                            <td>~ 3.0초</td>
+                            <td><span style="color: var(--success); font-weight: 600;">0.05 Gwei (약 15원)</span></td>
+                            <td>450ms (0.45초)</td>
+                            <td>확률적<br><span style="font-size: 0.9em; color: gray;">(15 블록 × 0.45초 ≈ 7초)</span>
+                            </td>
                             <td>
                                 <ul>
                                     <li>거대한 글로벌 사용자 기반</li>
                                     <li>낮은 수수료</li>
                                     <li>높은 유동성</li>
+                                    <li><strong>Opinion Labs 사용 (메인넷)</strong></li>
                                 </ul>
                             </td>
                             <td>다소 중앙화된 검증자 세트</td>
                             <td><span class="label label-success">최고의 선택</span></td>
                         </tr>
                         <tr>
+                            <td><strong>Polygon PoS</strong></td>
+                            <td><span style="color: var(--success); font-weight: 600;">~ $0.001 (약 1.5원)</span></td>
+                            <td>~ 2.1초</td>
+                            <td>확률적<br><span style="font-size: 0.9em; color: gray;">(~128 블록 × 2.1초 ≈
+                                    5분)</span></td>
+                            <td>
+                                <ul>
+                                    <li>극도로 낮은 수수료</li>
+                                    <li>성숙한 생태계</li>
+                                    <li>뛰어난 EVM 호환성</li>
+                                </ul>
+                            </td>
+                            <td>재구성(Reorg) 위험 (현재는 드묾)</td>
+                            <td><span class="label label-primary">강력한 대안</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>이더리움 (L1)</strong></td>
+                            <td><span style="color: var(--danger); font-weight: 600;">$2.00 - $50.00+</span></td>
+                            <td>~ 12초</td>
+                            <td>안전: ~12분<br><span style="font-size: 0.9em; color: gray;">(2 에폭)</span></td>
+                            <td>
+                                <ul>
+                                    <li>최고 수준의 보안</li>
+                                    <li>가장 높은 유동성</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><strong>지나치게 비싼 비용</strong></li>
+                                    <li>고빈도 거래에 느림</li>
+                                </ul>
+                            </td>
+                            <td><span class="label label-warning">정산 전용</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>솔라나 (Solana)</strong></td>
+                            <td><span style="color: var(--success); font-weight: 600;">~ $0.00025 (약 0.3원)</span></td>
+                            <td>~ 400ms</td>
+                            <td>빠름<br><span style="font-size: 0.9em; color: gray;">(~12초 확정)</span></td>
+                            <td>
+                                <ul>
+                                    <li>높은 처리량</li>
+                                    <li>낮은 지연 시간</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><strong>Rust 재작성 필요</strong></li>
+                                    <li>중단(Outage) 이력</li>
+                                </ul>
+                            </td>
+                            <td><span class="label label-danger">호환 불가</span></td>
+                        </tr>
+                        <tr>
                             <td><strong>Monad</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">&lt; $0.001 (약 1원 미만)</span>
                             </td>
                             <td>1.0초</td>
+                            <td><strong>즉시</strong><br><span style="font-size: 0.9em; color: gray;">(1 블록 × 1초 =
+                                    1초)</span></td>
                             <td>
                                 <ul>
                                     <li>10,000 TPS (병렬 EVM)</li>
                                     <li>1초 블록 타임 (즉시 체결)</li>
                                     <li>완벽한 EVM 호환</li>
+                                    <li><strong>Opinion Labs 지원</strong></li>
                                 </ul>
                             </td>
                             <td>
@@ -2594,6 +2640,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><strong>Monero (XMR)</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">낮음</span></td>
                             <td>~ 2분</td>
+                            <td>느림<br><span style="font-size: 0.9em; color: gray;">(10 블록 × 2분 ≈ 20분)</span></td>
                             <td>
                                 <ul>
                                     <li><strong>완전한 익명성</strong> (링 서명)</li>
@@ -2612,6 +2659,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                             <td><strong>Zcash (ZEC)</strong></td>
                             <td><span style="color: var(--success); font-weight: 600;">낮음</span></td>
                             <td>~ 75초</td>
+                            <td>느림<br><span style="font-size: 0.9em; color: gray;">(24 블록 × 75초 ≈ 30분)</span></td>
                             <td>
                                 <ul>
                                     <li>선택적 익명성 (zk-SNARKs)</li>
@@ -2624,25 +2672,6 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                                 </ul>
                             </td>
                             <td><span class="label label-danger">호환 불가</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Hyperliquid</strong></td>
-                            <td><span style="color: var(--success); font-weight: 600;">~ $0.00</span></td>
-                            <td>&lt; 1초</td>
-                            <td>
-                                <ul>
-                                    <li><strong>압도적인 속도</strong> (200k TPS)</li>
-                                    <li>HyperEVM (커스텀 컨트랙트)</li>
-                                    <li>네이티브 영구선물 유동성</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>별도의 L1 (브릿징 필요)</li>
-                                    <li>신생 생태계</li>
-                                </ul>
-                            </td>
-                            <td><span class="label label-success">강력한 경쟁자</span></td>
                         </tr>
 
                         <!-- L2s -->
@@ -2659,6 +2688,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                                     <li>Coinbase 통합 (쉬운 온보딩)</li>
                                     <li>빠르게 성장 중</li>
                                     <li>EVM 등가성 (Equivalent)</li>
+                                    <li><strong>Limitless Exchange 사용</strong></li>
                                 </ul>
                             </td>
                             <td>새로운 생태계</td>
@@ -2672,6 +2702,7 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                                 <ul>
                                     <li>가장 높은 L2 TVL</li>
                                     <li>깊은 USDC 유동성</li>
+                                    <li><strong>PrismX / Rain 사용</strong></li>
                                 </ul>
                             </td>
                             <td>Polygon/BSC보다 약간 높은 수수료</td>
@@ -2713,10 +2744,22 @@ ETH/USD: 0xF0d50568e3A7e8259E16663972b11910F89BD8e7</pre>
                 </table>
             </div>
 
-            <h4>주요 권장 사항: Polygon 또는 BSC</h4>
-            <p><strong>Polygon PoS</strong>와 <strong>BSC</strong>는 현재 배포를 위한 최고의 후보입니다. 극도로 낮은 트랜잭션 수수료, 성숙한 생태계,
-                그리고
-                거대한 글로벌 사용자 기반의 결합은 가스 비용이 무시할 수 있을 정도로 작아야 하는 고빈도 예측 시장 플랫폼에 이상적입니다.</p>
+            <h4>주요 권장 사항: BNB 스마트 체인 (BSC)</h4>
+            <div class="box box-success" style="margin-bottom: 1.5rem;">
+                <span class="box-title">BSC가 승자인 이유</span>
+                <ul>
+                    <li><strong>압도적인 속도:</strong> 최근 <strong>450ms 블록 타임</strong> 업그레이드로 BSC는 <strong>~7초의
+                            파이널리티</strong>를 제공합니다. 이는 Polygon PoS(~2-5분)보다 훨씬 빠르며 중앙화 거래소에 가까운 쾌적한 거래 경험을 제공합니다.</li>
+                    <li><strong>바이낸스 거래소와의 연계:</strong> BSC에서 네이티브로 구축하는 것은 <strong>바이낸스 상장 잠재력에 있어 전략적 이점</strong>을
+                        제공합니다. BNB 생태계에 거래량과 유용성을 제공하는 프로젝트는 지원 및 상장 기회에서 우선순위를 갖는 경우가 많습니다.</li>
+                    <li><strong>검증된 유동성:</strong> BSC는 지속적으로 높은 유동성과 활성 사용자 수를 유지하며, 이는 초기 예측 시장 활성화에 필수적입니다.</li>
+                    <li><strong>성장과 경쟁력:</strong> BNB 체인은 능동적으로 진화하고 있으며, <a
+                            href="https://x.com/BNBCHAIN/status/1970504591117897786" target="_blank">최근 발표</a>된 수수료 인하와
+                        속도 업그레이드를 통해 Base 및 Solana와 직접 경쟁하며 고빈도 거래에 최적화된 환경을 유지하고 있습니다.</li>
+                </ul>
+            </div>
+            <p>Polygon은 낮은 수수료 덕분에 여전히 실행 가능한 백업이지만, BSC의 압도적인 퍼포먼스와 전략적 생태계 연계는 <strong>Nostra</strong>를 위한 최적의 런치패드가
+                됩니다.</p>
 
             <div class="box box-success">
                 <span class="box-title">기술 노트: 코드 변경 없음 (EVM 이식성)</span>
